@@ -2,6 +2,12 @@
 This tool was implemented for performance, energy and memory bandwidth evaluation of database indexes designed for persistent memory.
 This repository includes implementations of index structures derived from [RECIPE](https://github.com/utsaslab/RECIPE) and the microbenchmarks for index structures evaluation based on Yahoo! Cloud Serving Benchmark(YCSB) and TPC-C benchmark. 
 
+# Clone this repository
+
+```
+git clone --recursive https://github.com/mkatsa/PENVMTool.git
+```
+
 # Contents
 
 # Building & Running indexes on DRAM and on Intel Optane DC Persistent Memory
@@ -13,9 +19,27 @@ This repository includes implementations of index structures derived from [RECIP
 ```
 $ sudo apt-get install build-essential cmake libboost-all-dev libpapi-dev default-jdk
 ```
+
 ```
 $ sudo apt-get install libtbb-dev libjemalloc-dev
 ```
+
+## PCM tool Build
+
+PENVMTool relies on [Processor Counter Monitor(PCM)](https://github.com/opcm/pcm) tool, which is an application programmind interface(API) and a set of tools based on the API to monitor performance and energy metrics for Intel® Core™, Xeon®, Atom™ and Xeon Phi™ processors. PCM works on Linux, Windows, Mac OS X, FreeBSD, DragonFlyBSD and ChromeOS operating systems.
+
+Build PCM:
+
+```
+$ cd ./pcm
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+```
+
+
+
 
 ## Intel Optane DC configurations and libraries
 
