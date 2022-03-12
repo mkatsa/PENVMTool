@@ -8,6 +8,11 @@ This repository includes implementations of index structures derived from [RECIP
 
 ## Dependencies
 
+### Package Installation
+
+> sudo apt-get install build-essential cmake libboost-all-dev libpapi-dev default-jdk
+
+
 ## Intel Optane DC configurations
 
 ## YCSB workloads
