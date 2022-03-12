@@ -78,7 +78,7 @@ Specify the desired size(bytes) to be allocated in the memory pool file
 ```
 Please modify the configurations on the below to fit your environment
 export VMMALLOC_POOL_SIZE=$((64*1024*1024*1024))
-export VMMALLOC_POOL_DIR="/mnt/pmem"
+export VMMALLOC_POOL_DIR="/mnt/pmem1"
 ```
 
 
