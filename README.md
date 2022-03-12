@@ -140,11 +140,30 @@ YCSB is now successfully built.
 * Add how to build tree libs
 * Add how to build TPC-C
 
-## Build and Integrate your Benchmark
+## Build your own Benchmark
 
 ## Energy Consumption Monitoring and Application-Level Performance
 
-## Memory Bandwidth Monitoring
+## Memory Bandwidth Monitoring Tool
+This tool is implemented for run-time monitoring of memory bandwidth of the Intel Optane DC throughout the execution of the input application. 
+
+First, adjust the **lines 29-31** of the **monitor_throughput.sh** script in order to fit your environment:
+
+```
+export VMMALLOC_POOL_SIZE=$((64*1024*1024*1024))
+export VMMALLOC_POOL_DIR="/mnt/pmem1"
+libvmmalloc_path="/usr/local/lib/libvmmalloc.so.1"
+```
+Next, execute the **monitor_throughput.sh** script with the sampling rate for PCM and the input application to execute. Then follow the instructions of the script. It requires **sudo** privileges. Sampling rate is suggested to be set to 0.01. 
+
+```
+$ sudo ./monitor_throughput.sh <sampling_rate> <application(ycsb|tpcc)>
+```
+The final output will be reported on **./results/throughput/** directory.
+
+### Integrate your Benchmark for Memory Bandwidth Profiling
+
+# Known Issues
 
 # References
 
