@@ -180,10 +180,15 @@ You can easily integrate your own benchmark for memory bandwidhth monitoring by 
 
 # Known Issues
 
-* There exist some workspaces, where TPC-C cannot be executed for multiple thread and throws the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You need to then LD_PRELOAD also the new version of _jemalloc_ in addition to _libvmmaloc_. In order to maintain the funcitonality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not. In this case you need to modify the corresponding lines, where the benchmarks are executed in monitor_bandwidth.sh script to LD_PRELOAD the corresponding _jemalloc_ library.
+* There exist some workspaces, where TPC-C cannot be executed for multiple thread and throws the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You can find more information about this [here](https://github.com/jemalloc/jemalloc/blob/dev/INSTALL.md). Then ,you need to then LD_PRELOAD also the new version of _jemalloc_ in addition to _libvmmaloc_. In order to maintain the funcitonality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not. In this case you need to modify the corresponding lines, where the benchmarks are executed in monitor_bandwidth.sh script to LD_PRELOAD the corresponding _jemalloc_ library.
 
 # References
 
 # License
+
+The licences for most the persistent indexes are [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0), [MIT](https://opensource.org/licenses/MIT) and [ISC](https://opensource.org/licenses/ISC). The [RECIPE](https://github.com/utsaslab/RECIPE) also utilizes [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
+PENVMTool is publicly available with open source [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For more information please refer to the [LICENSE](https://github.com/mkatsa/PENVMTool/blob/main/LICENSE) file or out repository.
+
 
 # Contact
