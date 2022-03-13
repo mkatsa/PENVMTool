@@ -10,7 +10,18 @@ git clone --recursive https://github.com/mkatsa/PENVMTool.git
 
 # Contents
 
-# Building & Running indexes on DRAM and on Intel Optane DC Persistent Memory
+This repository contains the following:
+* An energy consumption monitoring tool for applications deployed ons Intel Optane DC Persistent Memory
+* A run-time memory bandwidth tool for applications deployed on Intel Optane DC Persistent Memory
+* Integrated implementations of alternative B+-tree indexes in YCSB and TPC-C benchmarks. All the index implementations are derived from [RECIPE](https://github.com/utsaslab/RECIPE). More specifically, we utilize the following B+-tree implementations:
+	* [Masstree](https://github.com/utsaslab/RECIPE/tree/master/P-Masstree) : Integrated both on YCSB and TPC-C benchmarks
+	* [P-BWTree](https://github.com/utsaslab/RECIPE/tree/master/P-BwTree) : Integrated both on YCSB and TPC-C benchmarks
+	* [Fast&Fair](https://github.com/utsaslab/RECIPE/tree/master/third-party/FAST_FAIR) : Integrated both on YCSB and TPC-C benchmarks
+	* [FPTree](https://github.com/utsaslab/RECIPE/tree/master/third-party/CrashTest/fptree) : Integrated only on YCSB benchmark
+	* [WBTree](https://github.com/utsaslab/RECIPE/tree/master/third-party/CrashTest/wbtree) : Integrated both on YCSB and TPC-C benchmarks
+
+
+# Building & Running indexes on Intel Optane DC Persistent Memory
 
 ## Dependencies
 
@@ -24,7 +35,7 @@ $ sudo apt-get install build-essential cmake libboost-all-dev libpapi-dev defaul
 $ sudo apt-get install libtbb-dev libjemalloc-dev
 ```
 
-## PCM tool Build
+## PCM Tool Build
 
 PENVMTool relies on [Processor Counter Monitor(PCM)](https://github.com/opcm/pcm) tool, which is an application programmind interface(API) and a set of tools based on the API to monitor performance and energy metrics for Intel® Core™, Xeon®, Atom™ and Xeon Phi™ processors. PCM works on Linux, Windows, Mac OS X, FreeBSD, DragonFlyBSD and ChromeOS operating systems.
 
@@ -181,8 +192,6 @@ You can easily integrate your own benchmark for memory bandwidhth monitoring by 
 # Known Issues
 
 * There exist some workspaces, where TPC-C cannot be executed for multiple thread and throws the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You can find more information about this [here](https://github.com/jemalloc/jemalloc/blob/dev/INSTALL.md). Then ,you need to then LD_PRELOAD also the new version of _jemalloc_ in addition to _libvmmaloc_. In order to maintain the funcitonality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not. In this case you need to modify the corresponding lines, where the benchmarks are executed in monitor_bandwidth.sh script to LD_PRELOAD the corresponding _jemalloc_ library.
-
-# References
 
 # License
 
