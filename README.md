@@ -1,5 +1,5 @@
 # PENVMTool : Performance and Energy Evaluation Tool for Persistent-Memory Indexes
-This tool was implemented for performance, energy and memory bandwidth evaluation of database indexes designed for persistent memory.
+This tool was implemented for performance, energy and memory bandwidth evaluation of database indexes designed for persistent memory. We provide an automated tool for energy consumption and the memory bandwidth run-time monitoring of Intel Optane DC DIMMs.
 This repository includes implementations of index structures derived from [RECIPE](https://github.com/utsaslab/RECIPE) and the microbenchmarks for index structures evaluation based on Yahoo! Cloud Serving Benchmark(YCSB) and TPC-C benchmark. 
 
 # Clone this repository
@@ -37,9 +37,6 @@ $ cd build
 $ cmake ..
 $ cmake --build .
 ```
-
-
-
 
 ## Intel Optane DC configurations and libraries
 
@@ -121,7 +118,7 @@ $ cd ..
 ```
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake -DENABLE_STRING_TYPE=NO ..
 $ make -j
 ```
 
@@ -140,9 +137,10 @@ YCSB is now successfully built.
 * Add how to build tree libs
 * Add how to build TPC-C
 
-## Build your own Benchmark
-
 ## Energy Consumption Monitoring and Application-Level Performance
+
+* Add how to energy consumption operates
+* Add how to integrate your own benchmark
 
 ## Memory Bandwidth Monitoring Tool
 This tool is implemented for run-time monitoring of memory bandwidth of the Intel Optane DC throughout the execution of the input application. 
@@ -163,7 +161,26 @@ The final output will be reported on **./results/bandwidth/** directory.
 
 ### Integrate your Benchmark for Memory Bandwidth Profiling
 
+You can easily integrate your own benchmark for memory bandwidhth monitoring by simply replacing and uncommenting the following commented lines in the **monitor_bandwidth.sh** script. If your benchmark does not utilize the _libvmmalloc_ library, you can remove the LD_PRELOAD and just execute your benchmark that utilizes Intel Optane DC. 
+
+```
+#elif [ $benchmark = "my_own_benchmark" ]; then
+	
+#	cd /path/to/my/benchmark
+
+#	${home_dir}/pcm/build/bin/pcm-memory $sampling -csv=${home_dir}/results/bandwidth/memory_bandwidth.csv &
+#	LD_PRELOAD=${libvmmalloc_path} ./my_own_benchmark [arguments]
+
+#	pkill -9 -f pcm-memory
+#	wait
+
+#	echo "My own benchmark terminated"
+#	echo ""
+```
+
 # Known Issues
+
+* There exist some workspaces, where TPC-C cannot be executed for multiple thread and throws the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You need to then LD_PRELOAD also the new version of jemalloc with the libvmmaloc. In order to maintain the funcitonality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not.
 
 # References
 
