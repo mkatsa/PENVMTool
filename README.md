@@ -1,6 +1,6 @@
 # PENVMTool : Performance and Energy Evaluation Tool for Persistent-Memory Indexes
 This tool was implemented for performance, energy and memory bandwidth evaluation of database indexes designed for persistent memory. We provide an automated tool for energy consumption and the memory bandwidth run-time monitoring of Intel Optane DC DIMMs.
-This repository includes implementations of index structures derived from [RECIPE](https://github.com/utsaslab/RECIPE) and the microbenchmarks for index structures evaluation based on Yahoo! Cloud Serving Benchmark(YCSB) and TPC-C benchmark. 
+This repository includes implementations of index structures derived from [RECIPE](https://github.com/utsaslab/RECIPE) and the microbenchmarks for index structures evaluation based on [Yahoo! Cloud Serving Benchmark(YCSB)](https://github.com/brianfrankcooper/YCSB) and TPC-C benchmark. 
 
 # Clone this repository
 
