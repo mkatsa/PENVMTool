@@ -35,6 +35,8 @@ $ sudo apt-get install build-essential cmake libboost-all-dev libpapi-dev defaul
 $ sudo apt-get install libtbb-dev libjemalloc-dev
 ```
 
+The execution requires also Python3 and GCC.
+
 ## PCM Tool Build
 
 PENVMTool relies on [Processor Counter Monitor(PCM)](https://github.com/opcm/pcm) tool, which is an application programmind interface(API) and a set of tools based on the API to monitor performance and energy metrics for Intel® Core™, Xeon®, Atom™ and Xeon Phi™ processors. PCM works on Linux, Windows, Mac OS X, FreeBSD, DragonFlyBSD and ChromeOS operating systems.
