@@ -5,7 +5,7 @@ This repository includes implementations of index structures derived from [RECIP
 # Clone this repository
 
 ```
-git clone --recursive https://github.com/mkatsa/PENVMTool.git
+$ git clone --recursive https://github.com/mkatsa/PENVMTool.git
 ```
 
 # Contents
