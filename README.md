@@ -158,13 +158,30 @@ YCSB is now successfully built.
 
 ## Energy Consumption Monitoring and Application-Level Performance
 
-* Add how to energy consumption operates
-* Add how to integrate your own benchmark
+Thit tool is implemented for run-time monitoring of the energy consumed on the Intel Optane DC DIMMs throughout the execution of the input application. The tool automatically detects the NVM banks in your system.
+
+First, find and adjust the following lines of the **monitor_energy.sh** script in order to fit your environment:
+
+```
+export VMMALLOC_POOL_SIZE=$((64*1024*1024*1024))
+export VMMALLOC_POOL_DIR="/mnt/pmem1"
+libvmmalloc_path="/usr/local/lib/libvmmalloc.so.1"
+```
+
+Next, execute the **monitor_energy.sh** script with the sampling rate for PCM and the input application to execute. Then follow the instructions of the script. It requires **sudo** privileges. Sampling rate is suggested to be set to 0.01. 
+
+```
+$ sudo ./monitor_energy.sh <sampling_rate> <application(ycsb|tpcc)>
+```
+
+The final output will be reported on **./results/energy/** directory.
+
+
 
 ## Memory Bandwidth Monitoring Tool
 This tool is implemented for run-time monitoring of memory bandwidth of the Intel Optane DC throughout the execution of the input application. 
 
-First, adjust the **lines 29-31** of the **monitor_bandwidth.sh** script in order to fit your environment:
+First, find and adjust the following lines of the **monitor_bandwidth.sh** script in order to fit your environment:
 
 ```
 export VMMALLOC_POOL_SIZE=$((64*1024*1024*1024))
@@ -176,6 +193,7 @@ Next, execute the **monitor_bandwidth.sh** script with the sampling rate for PCM
 ```
 $ sudo ./monitor_bandwidth.sh <sampling_rate> <application(ycsb|tpcc)>
 ```
+
 The final output will be reported on **./results/bandwidth/** directory.
 
 ### Integrate your Benchmark for Memory Bandwidth Profiling
