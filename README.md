@@ -153,8 +153,7 @@ YCSB is now successfully built.
 
 ## TPC-C benchmark build
 
-* Add how to build tree libs
-* Add how to build TPC-C
+* Pending instructions for TPC-C benchmark
 
 ## Energy Consumption Monitoring and Application-Level Performance
 
