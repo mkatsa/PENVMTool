@@ -51,6 +51,12 @@ $ cmake ..
 $ cmake --build .
 ```
 
+All the utilitis of PCM will be built in _build/bin_ directory. If you want to accelerate the building phase you can use the _--parallel_ flag:
+
+```
+cmake --build . --parallel
+```
+
 ## Intel Optane DC configurations and libraries
 
 Intel Optane DC must be configured in App Direct mode. Documentation about the setup and the usage of Intel Optane in App Direct mode can be found [here](https://www.intel.com/content/dam/support/us/en/documents/memory-and-storage/data-center-persistent-mem/Intel-Optane-DC-Persistent-Memory-Quick-Start-Guide.pdf). In our experiments we configured Intel Optane namespace in _fsdax_ mode, which allows the direct access programming model. 
