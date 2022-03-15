@@ -153,6 +153,18 @@ YCSB is now successfully built.
 
 ## TPC-C benchmark build
 
+
+* Add instructions on how to build indexes
+
+* Build TPC-C benchmark
+```
+$ cd ./tpccbench
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j
+```
+
 * Pending instructions for TPC-C benchmark
 
 ## Energy Consumption Monitoring and Application-Level Performance
