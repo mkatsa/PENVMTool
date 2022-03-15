@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtpccbench.a  CMakeFiles/tpccbench.dir/tpcctables.cc.o CMakeFiles/tpccbench.dir/clock.cc.o CMakeFiles/tpccbench.dir/randomgenerator.cc.o CMakeFiles/tpccbench.dir/tpccclient.cc.o CMakeFiles/tpccbench.dir/tpccgenerator.cc.o CMakeFiles/tpccbench.dir/tpccdb.cc.o CMakeFiles/tpccbench.dir/library_loader.cpp.o
+/usr/bin/ranlib libtpccbench.a

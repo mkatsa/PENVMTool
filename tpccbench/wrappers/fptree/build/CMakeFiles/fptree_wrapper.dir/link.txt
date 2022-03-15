@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O3 -std=c++17 -lpmem -lpmemobj -ljemalloc -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mrtm -ltbb -pthread -O3 -DNDEBUG  -shared -Wl,-soname,libfptree_wrapper.so -o src/libfptree_wrapper.so CMakeFiles/fptree_wrapper.dir/fptree_wrapper.cpp.o CMakeFiles/fptree_wrapper.dir/fptree/fptree.cpp.o  -lpmemobj -ltbb 

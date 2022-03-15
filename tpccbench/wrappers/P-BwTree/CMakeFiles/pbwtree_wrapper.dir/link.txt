@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libpbwtree_wrapper.so -o ../../libpbwtree_wrapper.so CMakeFiles/pbwtree_wrapper.dir/pbwtree_wrapper.cpp.o CMakeFiles/pbwtree_wrapper.dir/P-BwTree/src/bwtree.cpp.o  libIndexes.a /usr/lib/x86_64-linux-gnu/libtbb.so /usr/lib/x86_64-linux-gnu/libjemalloc.so -lpthread 

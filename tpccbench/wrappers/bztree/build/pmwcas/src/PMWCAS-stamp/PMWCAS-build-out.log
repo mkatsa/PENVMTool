@@ -1,0 +1,19 @@
+[ 14%] Built target glog
+[ 29%] Built target pmwcas
+[ 33%] Built target gtest
+[ 36%] Built target gmock
+[ 40%] Built target gmock_main
+[ 43%] Built target gtest_main
+[ 47%] Built target signalhandler_unittest
+[ 50%] Built target utilities_unittest
+[ 54%] Built target demangle_unittest
+[ 57%] Built target symbolize_unittest
+[ 61%] Built target logging_unittest
+[ 64%] Built target stacktrace_unittest
+[ 68%] Built target stl_logging_unittest
+[ 73%] Built target garbage_list_test
+[ 78%] Built target epoch_test
+[ 84%] Built target callback_tests
+[ 89%] Built target mem_safety_tests
+[ 94%] Built target recovery_tests
+[100%] Built target mwcas_tests

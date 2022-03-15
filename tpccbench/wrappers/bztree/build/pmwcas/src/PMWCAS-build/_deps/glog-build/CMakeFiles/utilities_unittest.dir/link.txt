@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wno-long-long -pedantic -fPIC -march=native -g  -rdynamic CMakeFiles/utilities_unittest.dir/src/utilities_unittest.cc.o  -o utilities_unittest  libglogd.a -pthread 

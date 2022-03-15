@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wno-long-long -pedantic -fPIC -march=native -g  -rdynamic CMakeFiles/demangle_unittest.dir/src/demangle_unittest.cc.o  -o demangle_unittest  libglogd.a -pthread 

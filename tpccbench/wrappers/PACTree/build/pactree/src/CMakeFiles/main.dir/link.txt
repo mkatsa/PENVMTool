@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -pthread -Wall -Wextra -march=native -mavx512bw -g   CMakeFiles/main.dir/main.cpp.o  -o main  libpactree.a -lnuma -ljemalloc ../lib/PDL-ART/libpdlart.a -lpmemobj -lpmem 

@@ -1,0 +1,344 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54c59/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_54c59.dir/build.make CMakeFiles/cmTC_54c59.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54c59.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_54c59.dir/src.c.o   -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_54c59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54c59.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_54c59.dir/src.c.o  -o cmTC_54c59 
+/usr/bin/ld: CMakeFiles/cmTC_54c59.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_54c59.dir/build.make:87: cmTC_54c59] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_54c59/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a482b/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a482b.dir/build.make CMakeFiles/cmTC_a482b.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a482b.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a482b.dir/CheckIncludeFile.c.o   -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: No such file or directory
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [CMakeFiles/cmTC_a482b.dir/build.make:66: CMakeFiles/cmTC_a482b.dir/CheckIncludeFile.c.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_a482b/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of unsigned __int16 failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a779/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1a779.dir/build.make CMakeFiles/cmTC_1a779.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a779.dir/HAVE___UINT16.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1a779.dir/HAVE___UINT16.c.o   -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:31: error: expected ‘)’ before ‘__int16’
+   23 | #define SIZE (sizeof(unsigned __int16))
+      |                     ~         ^~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:31: error: expected ‘)’ before ‘__int16’
+   23 | #define SIZE (sizeof(unsigned __int16))
+      |                     ~         ^~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:26:12: note: in expansion of macro ‘SIZE’
+   26 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:31: error: expected ‘)’ before ‘__int16’
+   23 | #define SIZE (sizeof(unsigned __int16))
+      |                     ~         ^~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:27:12: note: in expansion of macro ‘SIZE’
+   27 |   ('0' + ((SIZE / 100)%10)),
+      |            ^~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:31: error: expected ‘)’ before ‘__int16’
+   23 | #define SIZE (sizeof(unsigned __int16))
+      |                     ~         ^~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:28:12: note: in expansion of macro ‘SIZE’
+   28 |   ('0' + ((SIZE / 10)%10)),
+      |            ^~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:31: error: expected ‘)’ before ‘__int16’
+   23 | #define SIZE (sizeof(unsigned __int16))
+      |                     ~         ^~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:29:12: note: in expansion of macro ‘SIZE’
+   29 |   ('0' +  (SIZE    % 10)),
+      |            ^~~~
+make[4]: *** [CMakeFiles/cmTC_1a779.dir/build.make:66: CMakeFiles/cmTC_1a779.dir/HAVE___UINT16.c.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_1a779/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(unsigned __int16))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function dladdr exists failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_96bf9/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_96bf9.dir/build.make CMakeFiles/cmTC_96bf9.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96bf9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dladdr   -o CMakeFiles/cmTC_96bf9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96bf9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96bf9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=dladdr    -rdynamic CMakeFiles/cmTC_96bf9.dir/CheckFunctionExists.c.o  -o cmTC_96bf9 
+/usr/bin/ld: CMakeFiles/cmTC_96bf9.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `dladdr'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_96bf9.dir/build.make:87: cmTC_96bf9] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_96bf9/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6719f/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6719f.dir/build.make CMakeFiles/cmTC_6719f.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6719f.dir/src.cxx.o
+/usr/bin/c++    -Wno-long-long -pedantic -fPIC -march=native -DHAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS   -Wunnamed-type-template-args -o CMakeFiles/cmTC_6719f.dir/src.cxx.o -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wunnamed-type-template-args'
+make[4]: *** [CMakeFiles/cmTC_6719f.dir/build.make:66: CMakeFiles/cmTC_6719f.dir/src.cxx.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_6719f/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function get_static_proc_name exists in the unwind failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb9bd/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cb9bd.dir/build.make CMakeFiles/cmTC_cb9bd.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb9bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=get_static_proc_name   -o CMakeFiles/cmTC_cb9bd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cb9bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb9bd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=get_static_proc_name    -rdynamic CMakeFiles/cmTC_cb9bd.dir/CheckFunctionExists.c.o  -o cmTC_cb9bd  -lunwind 
+/usr/bin/ld: cannot find -lunwind
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_cb9bd.dir/build.make:87: cmTC_cb9bd] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_cb9bd/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function UnDecorateSymbolName exists in the dbghelp failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_73cf9/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_73cf9.dir/build.make CMakeFiles/cmTC_73cf9.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73cf9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName   -o CMakeFiles/cmTC_73cf9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_73cf9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73cf9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName    -rdynamic CMakeFiles/cmTC_73cf9.dir/CheckFunctionExists.c.o  -o cmTC_73cf9  -ldbghelp 
+/usr/bin/ld: cannot find -ldbghelp
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_73cf9.dir/build.make:87: cmTC_73cf9] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_73cf9/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test HAVE_RWLOCK failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a522/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1a522.dir/build.make CMakeFiles/cmTC_1a522.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a522.dir/src.c.o
+/usr/bin/cc   -DHAVE_RWLOCK   -o CMakeFiles/cmTC_1a522.dir/src.c.o   -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1a522
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a522.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_RWLOCK    -rdynamic CMakeFiles/cmTC_1a522.dir/src.c.o  -o cmTC_1a522 
+/usr/bin/ld: CMakeFiles/cmTC_1a522.dir/src.c.o: in function `main':
+src.c:(.text+0x28): undefined reference to `pthread_rwlock_init'
+/usr/bin/ld: src.c:(.text+0x34): undefined reference to `pthread_rwlock_rdlock'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_1a522.dir/build.make:87: cmTC_1a522] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_1a522/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE___DECLSPEC failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f13d/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7f13d.dir/build.make CMakeFiles/cmTC_7f13d.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7f13d.dir/src.c.o
+/usr/bin/cc   -DHAVE___DECLSPEC   -o CMakeFiles/cmTC_7f13d.dir/src.c.o   -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | __declspec(selectany) int a;
+      | ^~~~~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c: In function ‘__declspec’:
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c:3:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+    3 | int main(void) { return 0; }
+      |                ^
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c:2:1: warning: type of ‘selectany’ defaults to ‘int’ [-Wimplicit-int]
+    2 | __declspec(selectany) int a;
+      | ^~~~~~~~~~
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c:2:27: error: declaration for parameter ‘a’ but no such parameter
+    2 | __declspec(selectany) int a;
+      |                           ^
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.c:4: error: expected ‘{’ at end of input
+    4 | 
+      | 
+make[4]: *** [CMakeFiles/cmTC_7f13d.dir/build.make:66: CMakeFiles/cmTC_7f13d.dir/src.c.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_7f13d/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+__declspec(selectany) int a;
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test STL_NO_NAMESPACE failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c93b6/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c93b6.dir/build.make CMakeFiles/cmTC_c93b6.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c93b6.dir/src.cxx.o
+/usr/bin/c++    -Wno-long-long -pedantic -fPIC -march=native -DSTL_NO_NAMESPACE   -o CMakeFiles/cmTC_c93b6.dir/src.cxx.o -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.cxx
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.cxx:3:1: error: ‘vector’ does not name a type
+    3 | vector<int> t; int main() { }
+      | ^~~~~~
+make[4]: *** [CMakeFiles/cmTC_c93b6.dir/build.make:66: CMakeFiles/cmTC_c93b6.dir/src.cxx.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_c93b6/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <vector>
+vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_MSVC_TLS failed with the following output:
+Change Dir: /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e5904/fast && make[3]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e5904.dir/build.make CMakeFiles/cmTC_e5904.dir/build
+make[4]: Entering directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e5904.dir/src.cxx.o
+/usr/bin/c++    -Wno-long-long -pedantic -fPIC -march=native -DHAVE_MSVC_TLS   -o CMakeFiles/cmTC_e5904.dir/src.cxx.o -c /home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.cxx
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp/src.cxx:2:11: error: expected constructor, destructor, or type conversion before ‘(’ token
+    2 | __declspec(thread) int tls;
+      |           ^
+make[4]: *** [CMakeFiles/cmTC_e5904.dir/build.make:66: CMakeFiles/cmTC_e5904.dir/src.cxx.o] Error 1
+make[4]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_e5904/fast] Error 2
+make[3]: Leaving directory '/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+__declspec(thread) int tls;
+int main() { }
+

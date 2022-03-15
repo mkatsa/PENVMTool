@@ -1,0 +1,13 @@
+# Target labels
+ PMWCAS
+# Source files and their labels
+/home/kskov/tpccbench/wrappers/bztree/build/CMakeFiles/PMWCAS
+/home/kskov/tpccbench/wrappers/bztree/build/CMakeFiles/PMWCAS.rule
+/home/kskov/tpccbench/wrappers/bztree/build/CMakeFiles/PMWCAS-complete.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-install.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-mkdir.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-download.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-update.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-patch.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-configure.rule
+/home/kskov/tpccbench/wrappers/bztree/build/pmwcas/src/PMWCAS-stamp/PMWCAS-build.rule

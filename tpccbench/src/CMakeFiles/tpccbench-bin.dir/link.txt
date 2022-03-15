@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tpccbench-bin.dir/tpcc.cc.o  -o tpcc  libtpccbench.a -ldl 

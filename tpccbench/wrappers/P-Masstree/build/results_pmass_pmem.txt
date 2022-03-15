@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+Loading 10 warehouses... 26835 ms
+Running... 900000 transactions in 132582 ms = 6788.264189 txns/s
+NewOrder: 405534 (45.0593 %)
+Payment: 386690 (42.9656 %)
+StockLevel: 35860 (3.98444 %)
+Delivery: 35951 (3.99456 %)
+OrderStatus: 35965 (3.99611 %) 
+
+Loading 20 warehouses... 54710 ms
+Running... 900000 transactions in 206327 ms = 4362.006507 txns/s
+NewOrder: 405432 (45.048 %)
+Payment: 386335 (42.9261 %)
+StockLevel: 36380 (4.04222 %)
+Delivery: 35952 (3.99467 %)
+OrderStatus: 35901 (3.989 %) 
+
+Loading 30 warehouses... 81932 ms
+Running... 900000 transactions in 366947 ms = 2452.669782 txns/s
+NewOrder: 405770 (45.0856 %)
+Payment: 386303 (42.9226 %)
+StockLevel: 35991 (3.999 %)
+Delivery: 35810 (3.97889 %)
+OrderStatus: 36126 (4.014 %) 
+
+Loading 40 warehouses... 101691 ms
+Running... 900000 transactions in 486059 ms = 1851.626464 txns/s
+NewOrder: 405525 (45.0583 %)
+Payment: 386279 (42.9199 %)
+StockLevel: 36065 (4.00722 %)
+Delivery: 36091 (4.01011 %)
+OrderStatus: 36040 (4.00444 %) 
+
+Loading 50 warehouses... 139127 ms
+Running... 900000 transactions in 766498 ms = 1174.170716 txns/s
+NewOrder: 405556 (45.0618 %)
+Payment: 386409 (42.9343 %)
+StockLevel: 35959 (3.99544 %)
+Delivery: 36018 (4.002 %)
+OrderStatus: 36058 (4.00644 %) 
+
+Loading 60 warehouses... 167397 ms
+Running... 900000 transactions in 1011259 ms = 889.979434 txns/s
+NewOrder: 404517 (44.9463 %)
+Payment: 387415 (43.0461 %)
+StockLevel: 36072 (4.008 %)
+Delivery: 36152 (4.01689 %)
+OrderStatus: 35844 (3.98267 %) 
+
+Loading 70 warehouses... 185331 ms
+Running... 900000 transactions in 1160640 ms = 775.434218 txns/s
+NewOrder: 404396 (44.9329 %)
+Payment: 387575 (43.0639 %)
+StockLevel: 36144 (4.016 %)
+Delivery: 35742 (3.97133 %)
+OrderStatus: 36143 (4.01589 %) 
+
+Loading 80 warehouses... 210403 ms
+Running... 900000 transactions in 1807618 ms = 497.892773 txns/s
+NewOrder: 404854 (44.9838 %)
+Payment: 386683 (42.9648 %)
+StockLevel: 36191 (4.02122 %)
+Delivery: 36171 (4.019 %)
+OrderStatus: 36101 (4.01122 %) 
+
+Loading 90 warehouses... 253085 ms
+Running... 900000 transactions in 2202496 ms = 408.627384 txns/s
+NewOrder: 404587 (44.9541 %)
+Payment: 387307 (43.0341 %)
+StockLevel: 36064 (4.00711 %)
+Delivery: 36154 (4.01711 %)
+OrderStatus: 35888 (3.98756 %) 
+
+Loading 100 warehouses... 287414 ms
+Running... 900000 transactions in 2545795 ms = 353.524131 txns/s
+NewOrder: 404772 (44.9747 %)
+Payment: 386980 (42.9978 %)
+StockLevel: 36120 (4.01333 %)
+Delivery: 36059 (4.00656 %)
+OrderStatus: 36069 (4.00767 %) 
+

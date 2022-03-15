@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -fPIC -pthread -Wall -Wextra -march=native -mavx512bw -g  -shared -Wl,-soname,libpactree_wrapper.so -o libpactree_wrapper.so CMakeFiles/pactree_wrapper.dir/pactree_wrapper.cpp.o  pactree/src/libpactree.a pactree/lib/PDL-ART/libpdlart.a -ltbb -lnuma -lpmem -lpmemobj 

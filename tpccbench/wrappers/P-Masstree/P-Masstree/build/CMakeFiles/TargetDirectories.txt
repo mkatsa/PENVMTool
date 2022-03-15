@@ -1,0 +1,4 @@
+/home/kskov/tpccbench/wrappers/P-Masstree/P-Masstree/build/CMakeFiles/rebuild_cache.dir
+/home/kskov/tpccbench/wrappers/P-Masstree/P-Masstree/build/CMakeFiles/edit_cache.dir
+/home/kskov/tpccbench/wrappers/P-Masstree/P-Masstree/build/CMakeFiles/myexam.dir
+/home/kskov/tpccbench/wrappers/P-Masstree/P-Masstree/build/CMakeFiles/example.dir
