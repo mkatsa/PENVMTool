@@ -154,7 +154,7 @@ YCSB is now successfully built.
 ## TPC-C benchmark build
 
 
-* Add instructions on how to build indexes
+* Build indexes for TPC-C benchmark
 
 * Build TPC-C benchmark
 ```
