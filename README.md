@@ -165,7 +165,8 @@ $ cmake ..
 $ make -j
 ```
 
-* Pending instructions for TPC-C benchmark
+The executable of TPC-C is now on _build/src_ directory.
+
 
 ## Energy Consumption Monitoring and Application-Level Performance
 
