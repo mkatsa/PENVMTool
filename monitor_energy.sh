@@ -152,7 +152,10 @@ elif [ $benchmark = "tpcc" ]; then
 		echo $bank
 		${home_dir}/pcm/build/bin/pcm-power $sampling -m 0 -csv=${home_dir}/results/energy/bank${bank}.csv &
 	done
-	LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libjemalloc.so.2 /usr/local/lib/libvmmalloc.so.1" ./tpcc ${warehouses} ${transactions} ../${lib_index}
+	
+	LD_PRELOAD=${libvmmalloc_path} ./tpcc ${warehouses} ${transactions} ../${lib_index}
+	
+	#LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libjemalloc.so.2 /usr/local/lib/libvmmalloc.so.1" ./tpcc ${warehouses} ${transactions} ../${lib_index}
 
 	pkill -9 -f pcm-power
 	wait
