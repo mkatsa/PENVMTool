@@ -5,7 +5,7 @@ This repository includes implementations of index structures derived from [RECIP
 # Clone this repository
 
 ```
-git clone --recursive https://github.com/mkatsa/PENVMTool.git
+$ git clone --recursive https://github.com/mkatsa/PENVMTool.git
 ```
 
 # Contents
@@ -34,6 +34,8 @@ $ sudo apt-get install build-essential cmake libboost-all-dev libpapi-dev defaul
 ```
 $ sudo apt-get install libtbb-dev libjemalloc-dev
 ```
+
+The execution requires also Python3 and GCC.
 
 ## PCM Tool Build
 
@@ -191,7 +193,7 @@ You can easily integrate your own benchmark for memory bandwidhth monitoring by 
 
 # Known Issues
 
-* There exist some workspaces, where TPC-C cannot be executed for multiple thread and throws the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You can find more information about this [here](https://github.com/jemalloc/jemalloc/blob/dev/INSTALL.md). Then ,you need to then LD_PRELOAD also the new version of _jemalloc_ in addition to _libvmmaloc_. In order to maintain the funcitonality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not. In this case you need to modify the corresponding lines, where the benchmarks are executed in monitor_bandwidth.sh script to LD_PRELOAD the corresponding _jemalloc_ library.
+* There exist some workspaces, where the benchmarks cannot be executed for multiple threads and throw the following error: **dlopen() fail: 'cannot allocate memory in static TLS block'**. This is a _jemalloc_ issue, which is utilized by _libvmmalloc_. In order to resolove this issue, you need to install a new version of _jemalloc_ in your system and configure it with the _--disable-initial-exec-tls_ enabled. You can find more information about this [here](https://github.com/jemalloc/jemalloc/blob/dev/INSTALL.md). Then ,you need to then LD_PRELOAD also the new version of _jemalloc_ in addition to _libvmmaloc_. In order to maintain the functionality of both YCSB and TPC-C, the best option is to have installed in your system two versions of _jemalloc_ and indicate each time to use either the one with _--disable-initial-exec-tls_ enabled or not. In this case you need to modify the corresponding lines, where the benchmarks are executed in monitor_bandwidth.sh script to LD_PRELOAD the corresponding _jemalloc_ library.
 
 # License
 
