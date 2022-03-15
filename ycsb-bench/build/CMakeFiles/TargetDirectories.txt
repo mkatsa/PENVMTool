@@ -1,0 +1,4 @@
+/home/mkatsa/databases/PENVMTool/ycsb-bench/build/CMakeFiles/rebuild_cache.dir
+/home/mkatsa/databases/PENVMTool/ycsb-bench/build/CMakeFiles/edit_cache.dir
+/home/mkatsa/databases/PENVMTool/ycsb-bench/build/CMakeFiles/ycsb.dir
+/home/mkatsa/databases/PENVMTool/ycsb-bench/build/CMakeFiles/Indexes.dir
