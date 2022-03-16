@@ -155,6 +155,12 @@ YCSB is now successfully built.
 
 
 * Build indexes for TPC-C benchmark
+```
+$ cd ./tpccbench
+$ ./build_indexes.sh
+```
+
+All the indexes are built as shared object(.so) files to _indexes/_ directory
 
 * Build TPC-C benchmark
 ```
@@ -165,8 +171,12 @@ $ cmake ..
 $ make -j
 ```
 
-The executable of TPC-C is now on _build/src_ directory.
+The executable of TPC-C is now on _build/src_ directory. You can now execute the TPC-C benchmark
 
+```
+$ cd ./tpccbench/build/src
+$ ./tpcc #Warehouses #Transactions ../relative/path/to/indexes/libs.so
+```
 
 ## Energy Consumption Monitoring and Application-Level Performance
 
