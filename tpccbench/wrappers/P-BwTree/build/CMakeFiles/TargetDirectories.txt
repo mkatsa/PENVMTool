@@ -1,4 +1,0 @@
-/home/kskov/tpccbench/wrappers/P-BwTree/build/CMakeFiles/rebuild_cache.dir
-/home/kskov/tpccbench/wrappers/P-BwTree/build/CMakeFiles/edit_cache.dir
-/home/kskov/tpccbench/wrappers/P-BwTree/build/CMakeFiles/Indexes.dir
-/home/kskov/tpccbench/wrappers/P-BwTree/build/CMakeFiles/pbwtree_wrapper.dir

@@ -1,3 +1,0 @@
-/home/kskov/tpccbench/wrappers/fastfair/build/CMakeFiles/edit_cache.dir
-/home/kskov/tpccbench/wrappers/fastfair/build/CMakeFiles/rebuild_cache.dir
-/home/kskov/tpccbench/wrappers/fastfair/build/CMakeFiles/fftree_wrapper.dir

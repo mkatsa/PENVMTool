@@ -1,3 +1,0 @@
-/home/kskov/tpccbench/wrappers/wbtree/build/CMakeFiles/rebuild_cache.dir
-/home/kskov/tpccbench/wrappers/wbtree/build/CMakeFiles/edit_cache.dir
-/home/kskov/tpccbench/wrappers/wbtree/build/CMakeFiles/wbtree_wrapper.dir

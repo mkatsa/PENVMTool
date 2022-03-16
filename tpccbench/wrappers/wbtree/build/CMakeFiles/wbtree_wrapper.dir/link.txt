@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++17 -g -g  -shared -Wl,-soname,libwbtree_wrapper.so -o libwbtree_wrapper.so CMakeFiles/wbtree_wrapper.dir/wbtree_wrapper.cpp.o CMakeFiles/wbtree_wrapper.dir/wbtree/wbtree.cpp.o 

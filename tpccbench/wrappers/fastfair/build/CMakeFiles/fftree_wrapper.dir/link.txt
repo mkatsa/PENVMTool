@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++11 -g -g  -shared -Wl,-soname,libfftree_wrapper.so -o libfftree_wrapper.so CMakeFiles/fftree_wrapper.dir/fftree_wrapper.cpp.o  -lpthread -pthread -lrt 

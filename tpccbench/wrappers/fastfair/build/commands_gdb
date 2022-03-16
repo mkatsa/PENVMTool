@@ -1,4 +1,0 @@
-file ../../../build/src/tpcc
-add-symbol-file ./libfftree_wrapper.so
-b tpcc.cc:124
-run 1 10 ./libfftree_wrapper.so

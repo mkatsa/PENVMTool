@@ -1,3 +1,0 @@
-/home/kskov/tpccbench/wrappers/P-Masstree/build/CMakeFiles/rebuild_cache.dir
-/home/kskov/tpccbench/wrappers/P-Masstree/build/CMakeFiles/edit_cache.dir
-/home/kskov/tpccbench/wrappers/P-Masstree/build/CMakeFiles/pmasstree_wrapper.dir
