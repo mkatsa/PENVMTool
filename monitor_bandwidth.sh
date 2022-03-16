@@ -123,7 +123,7 @@ elif [ $benchmark = "tpcc" ]; then
 	
 
 	${home_dir}/pcm/build/bin/pcm-memory $sampling -csv=${home_dir}/results/bandwidth/memory_bandwidth.csv &
-	LD_PRELOAD=${libvmmalloc_path} ./tpcc ${warehouses} ${transactions} ../${lib_index}
+	LD_PRELOAD=${libvmmalloc_path} ./tpcc ${warehouses} ${transactions} ${home_dir}/tpccbench/indexes/${lib_index}
 	#LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libjemalloc.so.2 /usr/local/lib/libvmmalloc.so.1" ./tpcc ${warehouses} ${transactions} ../${lib_index}
 
 

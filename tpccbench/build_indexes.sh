@@ -6,7 +6,7 @@
 home_dir=$(pwd)
 cd ${home_dir}
 
-mkdir -p ${home_dir}/indexes
+mkdir -p ${home_dir}/compiled_libs
 
 for index in P-BwTree fastfair P-Masstree wbtree
 do
@@ -23,5 +23,5 @@ do
 	cmake ..
 	make -j
 
-	cp ${home_dir}/wrappers/${index}/build/*.so ${home_dir}/indexes/
+	cp ${home_dir}/wrappers/${index}/build/*.so ${home_dir}/compiled_libs/
 done
