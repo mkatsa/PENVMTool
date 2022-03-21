@@ -178,7 +178,7 @@ $ cd ./tpccbench/build/src
 $ ./tpcc #Warehouses #Transactions ../relative/path/to/indexes/libs.so
 ```
 
-## Energy Consumption Monitoring and Application-Level Performance
+## Energy Consumption Monitoring
 
 Thit tool is implemented for run-time monitoring of the energy consumed on the Intel Optane DC DIMMs throughout the execution of the input application. The tool automatically detects the NVM banks in your system.
 
