@@ -178,7 +178,7 @@ $ cd ./tpccbench/build/src
 $ ./tpcc #Warehouses #Transactions ../relative/path/to/indexes/libs.so
 ```
 
-## Energy Consumption Monitoring and Application-Level Performance
+## Energy Consumption Monitoring
 
 Thit tool is implemented for run-time monitoring of the energy consumed on the Intel Optane DC DIMMs throughout the execution of the input application. The tool automatically detects the NVM banks in your system.
 
@@ -243,7 +243,7 @@ You can easily integrate your own benchmark for memory bandwidhth monitoring by 
 
 # License
 
-The licences for most the persistent indexes are [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0), [MIT](https://opensource.org/licenses/MIT) and [ISC](https://opensource.org/licenses/ISC). The [RECIPE](https://github.com/utsaslab/RECIPE) also utilizes [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0). This work was conducted in [Microprocessors and Digital Systems Laboratory(MicroLAB)](https://microlab.ntua.gr/) of Electrical and Computer Engineering School in the National and Technical University of Athens(NTUA). Scripts and code implemented by our group utilize [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0). PENVMTool is publicly available. For more information please refer to the [LICENSE](https://github.com/mkatsa/PENVMTool/blob/main/LICENSE) file or out repository.
+The licences for most the persistent indexes are [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0), [MIT](https://opensource.org/licenses/MIT) and [ISC](https://opensource.org/licenses/ISC). The [RECIPE](https://github.com/utsaslab/RECIPE) also utilizes [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0). This work was conducted in [Microprocessors and Digital Systems Laboratory(MicroLAB)](https://microlab.ntua.gr/) of Electrical and Computer Engineering School in the National and Technical University of Athens(NTUA). Scripts and code implemented by our group utilize [Apache2.0 License](https://www.apache.org/licenses/LICENSE-2.0). PENVMTool is publicly available. For more information please refer to the [LICENSE](https://github.com/mkatsa/PENVMTool/blob/main/LICENSE) file of our repository.
 
 
 # Contact
