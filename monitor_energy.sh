@@ -70,8 +70,8 @@ fi
 
 mkdir -p ${home_dir}/results/
 mkdir -p ${home_dir}/results/energy/
-if [ -f "${home_dir}/results/bandwidth/memory_bandwidth.csv" ]; then
-	rm -f ${home_dir}/results/bandwidth/memory_bandwidth.csv
+if [ -f "${home_dir}/results/energy/memory_energy.csv" ]; then
+	rm -f ${home_dir}/results/energy/memory_energy.csv
 fi
 
 
